@@ -1,18 +1,16 @@
 import headerStyles from "../styles/Header.module.scss";
 import Link from "next/link";
+import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <nav className={headerStyles.header}>
-      <ul>
-        <li>
-          <Link href="/">Blogg</Link>
-        </li>
-        <li>
-          <Link href="/">Rendez-vous</Link>
-        </li>
-      </ul>
-    </nav>
+    <div className={headerStyles.header}>
+      <div className={headerStyles.headerLeft}>
+        <div>Logo</div>
+        <div>Anne Trébout Naturopathe</div>
+      </div>
+      <Nav />
+    </div>
   );
 };
 

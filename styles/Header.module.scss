@@ -1,0 +1,12 @@
+@import 'colors';
+
+.header {
+    margin: 0 auto;
+    height: 100px;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: $color-header-bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

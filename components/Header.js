@@ -2,7 +2,7 @@ import headerStyles from "../styles/Header.module.scss";
 import Link from "next/link";
 import Nav from "./Nav";
 import Image from "next/image";
-import { IBM_Plex_Sans_Devanagari } from "@next/font/google";
+// import { IBM_Plex_Sans_Devanagari } from "@next/font/google";
 
 const Header = () => {
   return (
@@ -22,7 +22,9 @@ const Header = () => {
             height={70}
           />
         </div>
-        <div className={headerStyles.headerFonts}>Anne Trébout Naturopathe</div>
+        <div className={headerStyles.headerFonts}>
+          <Link href="/">Anne Trébout Naturopathe</Link>
+        </div>
       </div>
       <Nav />
     </div>

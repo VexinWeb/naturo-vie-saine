@@ -1,7 +1,7 @@
 @import 'colors';
 
 .collapse {
-    border-color: white;
+    // border-color: red;
     width: 500px;
     margin-bottom: 20px;
     @media screen and (max-width: 600px) {
@@ -15,8 +15,7 @@
         justify-content: space-between;
         align-items: center;
         height: 47px;
-        border-style: solid;
-        border-color: 1px white;
+        border-style: solid; 
         width: 500px;
         cursor: pointer;
 
@@ -29,18 +28,17 @@
 
         h3 {
             color: white;
-            font-weight: 500;
-            font-size: 24px;
+            font-size: 1.2rem;
             margin-left: 18px;
 
             @media screen and (max-width: 800px) {
-                font-size: 20px;
+                font-size: 1.1rem;
             }
             @media screen and (max-width: 700px) {
-                font-size: 16px;
+                font-size: 1rem;
             }
             @media screen and (max-width: 400px) {
-                font-size: 13px;
+                font-size: 1rem;
             }
         }
 
@@ -64,7 +62,6 @@
         padding: 15px;
         margin-top: -1px;
         border-style: solid;
-        border-color: 1px white;
         line-height: 1.5;
         @media screen and (max-width: 1100px) {
             font-size: 1rem;

@@ -1,0 +1,42 @@
+@import 'colors';
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 20px 0 20px;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .section1ImageContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        @media screen and (max-width: 1000px) {
+            width: 300px;
+            height: 300px;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .section1Right {
+        display: flex;
+        flex-direction: column;
+        color: $color-text; 
+        padding: 20px;
+        width: 80%;
+        min-height: 300px;
+        // @media screen and (max-width: 750px) {
+        //     min-height: 350px;
+        // }
+        
+        .section1Description {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

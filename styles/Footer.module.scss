@@ -1,0 +1,30 @@
+@import 'colors'; 
+
+.footer {
+    background-color: $color-footer-bg;
+    color: white;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -50px;
+    font-size: smaller;
+
+    p {
+        width: 500px;
+    }
+
+    @media screen and (max-width: 950px) {
+        font-size: x-small;
+        padding: 0 3px;
+    }
+    @media screen and (max-width: 750px) {
+        font-size: xx-small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}

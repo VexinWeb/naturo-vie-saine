@@ -1,5 +1,6 @@
 import styles from "../styles/Layout.module.scss";
 import Banner from "./Banner";
+import Footer from "./Footer";
 import Header from "./Header";
 // import Home from "../pages/Home";
 
@@ -10,8 +11,8 @@ const Layout = ({ children }) => {
     <div className={styles.container}>
       <Header />
       <Banner />
-      {/* main = <Home /> */}
       <main className={styles.main}>{children}</main>
+      <Footer />
     </div>
   );
 };

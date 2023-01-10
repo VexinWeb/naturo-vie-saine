@@ -17,8 +17,8 @@
 }
 
 .headerImageContainer {
-    width: 70px; 
-    height: 70px;
+    width: 60px; 
+    height: 60px;
 
     @media screen and (max-width: 500px) {
         width: 50px;
@@ -29,8 +29,9 @@
 .headerLeft {
     display: flex;
     align-items: center;
+    margin-left: 0;
 
     div {
-        margin-left: 10px;
+        margin-left: 5px;
     }
 }

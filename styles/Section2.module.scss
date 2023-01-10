@@ -1,0 +1,28 @@
+@import "colors"; 
+
+.section2 {
+    background-color: $color-second-bg;
+    color: white;
+    width: 100%;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        width: 500px;
+        @media screen and (max-width: 600px) {
+            width: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        margin-top: -20px;
+    }
+    @media screen and (max-width: 600px) {
+        margin-top: 0;
+    }
+}

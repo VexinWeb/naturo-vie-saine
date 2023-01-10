@@ -5,27 +5,46 @@
     flex-direction: row;
     align-items: center;
     margin: 20px;
+    @media screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+    }
+    @media screen and (max-width: 500px) {
+        margin-top: 0;
+    }
+
+    .heroImageContainer {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        @media screen and (max-width: 1000px) {
+            width: 200px;
+            height: 200px;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
 
     .heroLeft {
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: #81716F;
+        background-color: $color-second-bg;
         color: white;
         padding: 20px;
         width: 80%;
-        
+        height: 300px;
+        @media screen and (max-width: 1000px) {
+            height: 200px;
+        }
+        @media screen and (max-width: 750px) {
+            height: 300px;
+        }
+
         .heroDescription {
             display: flex;
             flex-direction: column;
         }
-
-        
-
     }
-    
-    // .heroImageContainer {
-    //     border-radius: 20px;
-    // }
-    
 }

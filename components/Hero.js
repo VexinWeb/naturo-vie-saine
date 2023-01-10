@@ -24,10 +24,13 @@ const Hero = () => {
           <h2>à Fontenay sous Bois et Gisors</h2>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet neque
-            quasi, culpa repellendus necessitatibus tempore sequi vitae earum
-            ratione architecto hic optio saepe praesentium excepturi doloremque
-            est mollitia rerum inventore id dignissimos ut omnis odit quaerat.
+            Les méthodes naturelles peuvent améliorer votre santé générale.{" "}
+            <br /> <br />
+            En collaboration, nous établissons des plans de traitement
+            personnalisés et efficaces. Je tiens compte de l'ensemble des
+            aspects de votre vie pour vous aider à atteindre votre bien-être, en
+            utilisant des techniques telles que l'homéopathie, l'aromathérapie
+            et les conseils en nutrition.
           </p>
         </div>
         {/* </div> */}

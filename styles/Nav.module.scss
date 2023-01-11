@@ -13,8 +13,27 @@
         flex-direction: row;
 
         li {
+            display: flex;
+            align-items: center;
             list-style: none;
+            width: 150px;
             margin: 0 16px;
+            @media screen and (max-width: 750px) {
+                width: 120px;
+            }
+            @media screen and (max-width: 650px) {
+                width: 110px;
+            }
+            @media screen and (max-width: 500px) {
+                width: 80px;
+            }
+            @media screen and (max-width: 400px) {
+                width: 40px;
+            }
+
+            a {
+                justify-content: center;
+            }
         }
     }
 }

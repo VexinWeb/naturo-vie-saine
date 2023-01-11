@@ -39,8 +39,11 @@ const Hero = () => {
         <Image
           src="/debout.png"
           alt="portrait de Anne Trébout, naturopathe"
+          style={{ width: "100%", maxHeight: "300px", objectFit: "contain" }}
           fill
-          style={{ objectFit: "contain" }}
+          sizes="(max-width: 768px) 50vw,
+          (max-width: 1200px) 50vw,
+          25vw"
         ></Image>
       </div>
     </div>

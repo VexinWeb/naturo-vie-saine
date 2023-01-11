@@ -6,14 +6,16 @@ const MyCalendly = () => {
     <InlineWidget
       apiKey={process.env.REACT_APP_CALENDLY_APIKEY}
       url="https://calendly.com/marcoguzmandev"
-      styles={{ height: "1000px" }}
+      styles={{
+        marginTop: "50px",
+        width: "100%",
+        height: "1500px",
+      }}
       pageSettings={{
         backgroundColor: "847571",
         hideEventTypeDetails: false,
         hideLandingPageDetails: false,
-        // primaryColor: "00a2ff",
         primaryColor: "ffffff",
-        // textColor: "4d5055",
         textColor: "ffffff",
       }}
       prefill={{

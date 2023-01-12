@@ -1,3 +1,4 @@
+import React from 'react';
 import { gql } from "@apollo/client";
 import client  from "../../apollo-client"
 import htmlParser from "../utils/htmlParser";
@@ -61,10 +62,10 @@ const Post = ({ data }) => {
                                        src={element.src}
                                        alt={element.alt}
                                        width={500}
-                                        height={500}
+                                       height={500}
                         />)
                     }
-                    return (<p key={index}>{element.text}</p>)
+                    return (React.createElement(element.tag, {key: index}, element.text))
                 })
                 }
             </div>

@@ -8,7 +8,8 @@ const MyCalendly = () => {
       url="https://calendly.com/vexinweb"
       styles={{
         marginTop: "50px",
-        width: "100%",
+        // width: "100%",
+        width: "340px",
         height: "1500px",
       }}
       pageSettings={{
@@ -17,24 +18,16 @@ const MyCalendly = () => {
         hideLandingPageDetails: false,
         primaryColor: "ffffff",
         textColor: "ffffff",
+        hideGdprBanner: false,
       }}
       prefill={{
-        email: "test@test.com",
-        firstName: "Jon",
-        lastName: "Snow",
-        name: "Jon Snow",
-        guests: ["janedoe@example.com", "johndoe@example.com"],
+        email: "",
+        firstName: "Prénom",
+        lastName: "Nom",
+        name: "",
+        guests: ["", ""],
         customAnswers: {
-          a1: "a1",
-          a2: "a2",
-          a3: "a3",
-          a4: "a4",
-          a5: "a5",
-          a6: "a6",
-          a7: "a7",
-          a8: "a8",
-          a9: "a9",
-          a10: "a10",
+          a1: "",
         },
         date: new Date(Date.now() + 86400000),
       }}

@@ -6,6 +6,7 @@ const Banner = () => {
     <div className={bannerStyles.bannerImageContainer}>
       <Image
         src="/banner_frieze.png"
+        as="image"
         alt="Banner with frieze"
         style={{
           width: "100%",

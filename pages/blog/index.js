@@ -16,6 +16,11 @@ export async function getStaticProps() {
               title
               content
               date
+              featuredImage {
+                node {
+                  link
+                }
+              }
             }
           }
         }
@@ -34,6 +39,9 @@ function blog({ data }) {
     post.node.id,
     post.node.title,
     htmlParser(post.node.content),
+    // post.node.featuredImage.node.link,
+    post.node.featuredImage,
+    console.log(post.node.date), // null
   ]);
   let postsConverted = [];
 
@@ -42,6 +50,7 @@ function blog({ data }) {
       id: element[0],
       title: element[1],
       content: element[2],
+      featuredImage: element[3],
     });
   });
 
@@ -69,10 +78,11 @@ function blog({ data }) {
             >
               <Link href="/blog/[id]" as={`/blog/${post.id}`}>
                 <h2 style={{ padding: "10px" }}>{post.title}</h2>
-                {post.content.map((element) => {
+                {post.content.map((element, index) => {
                   return React.createElement(
                     element.tag,
-                    { key: element.text },
+                    // { key: element.text },
+                    { key: index },
                     element.text
                   );
                 })}

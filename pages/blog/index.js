@@ -4,6 +4,8 @@ import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import htmlParser from "../utils/htmlParser";
 import Image from "next/image";
+import styles from "../../styles/Layout.module.scss";
+import blogStyles from "../../styles/Blog.module.scss";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -65,30 +67,45 @@ function blog({ data }) {
     return (
       <>
         {/* <h1>Blog alimenté par Wordpress</h1> */}
-        <div>
-          {postsConverted.map((post) => (
-            <div
-              key={post.id}
-              style={{
-                width: "300px",
-                height: "300px",
-                backgroundColor: "grey",
-                margin: "50px",
-              }}
-            >
-              <Link href="/blog/[id]" as={`/blog/${post.id}`}>
-                <h2 style={{ padding: "10px" }}>{post.title}</h2>
-                {post.content.map((element, index) => {
+        {/* All post cards */}
+        <div className={blogStyles.blog}>
+          <div className={blogStyles.posts}>
+            {postsConverted.map((post) => (
+              // Each post card :
+              <div className={blogStyles.post} key={post.id}>
+                <Link href="/blog/[id]" as={`/blog/${post.id}`}>
+                  {/* Title of each post card */}
+                  <div className={blogStyles.h2Container}>
+                    <h2 style={{ padding: "10px" }}>{post.title}</h2>
+                  </div>
+                  {/* Content of each post card */}
+                  {/* {post.content.map((element, index) => {
                   return React.createElement(
                     element.tag,
                     // { key: element.text },
                     { key: index },
                     element.text
                   );
-                })}
-              </Link>
-            </div>
-          ))}
+                })} */}
+                  <div className={blogStyles.imageContainer}>
+                    <Image
+                      src="https://picsum.photos/300"
+                      alt="lorem picsum random image"
+                      style={{
+                        width: "100%",
+                        maxHeight: "400px",
+                        objectFit: "cover",
+                      }}
+                      fill
+                      sizes="(max-width: 768px) 50vw,
+                    (max-width: 1200px) 50vw,
+                    25vw"
+                    ></Image>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
         {/* <div>
           {elementsArray.map((element, index) => {

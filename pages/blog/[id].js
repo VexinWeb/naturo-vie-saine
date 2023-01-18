@@ -52,7 +52,7 @@ const Post = ({ data }) => {
   console.log(elementsArray);
   return (
     <div>
-      <h2>{data.post.title}</h2>
+      <h3>{data.post.title}</h3>
       <div>
         {elementsArray.map((element, index) => {
           if (element.tag === "img") {

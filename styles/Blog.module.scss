@@ -13,19 +13,23 @@
     
         .post {
             width: 350px;
-            // background-color: $color-third-bg;
             margin: 20px auto;
             display: flex;
             flex-direction: column;
             
             .h2Container {
-                margin: 0;
-                height: 50px;
                 display: flex;
-                align-items: center;
-
+                justify-content: center;
+                display: block;
+                height: 50px;
+                width: 350px;
+                
                 h2 {
                     margin: 0;
+                    padding: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
     

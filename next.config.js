@@ -2,8 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['naturo.vexinweb.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        // hostname: "naturo.vexinweb.com",
+        hostname: "**",
+      },
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

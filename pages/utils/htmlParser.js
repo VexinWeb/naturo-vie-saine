@@ -7,7 +7,7 @@ function parseHTML(html) {
   let elementsObject = [];
   let i = 0;
 
-  const elements = $("body *:not(figure)");
+  const elements = $("body *:not(figure, br)");
 
   elements.each((index, element) => {
     if (element.name === "img") {

@@ -6,6 +6,7 @@ import htmlParser from "../utils/htmlParser";
 import Image from "next/image";
 import styles from "../../styles/Layout.module.scss";
 import blogStyles from "../../styles/Blog.module.scss";
+// import { withAssetPrefix } from "next/asset";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -57,11 +58,14 @@ function blog({ data }) {
       title: element[1],
       content: element[2],
       featuredImage: featuredImage,
-
     });
   });
 
   console.log(postsConverted);
+
+  // const assetPrefix = withAssetPrefix("");
+
+  // const imageUrl = this.props.myimage || "https://picsum.photos/350";
 
   {
     /* posts.map((post) => {
@@ -81,7 +85,10 @@ function blog({ data }) {
                 <Link href="/blog/[id]" as={`/blog/${post.id}`}>
                   {/* Title of each post card */}
                   <div className={blogStyles.h2Container}>
-                    <h2 style={{ padding: "10px" }}>{post.title}</h2>
+                    <h3 style={{ padding: "0 10px" }}>{post.title}</h3>
+
+                    {/* date */}
+                    {/* <h4 style={{ padding: "0 10px" }}>{post.date}</h4> */}
                   </div>
                   {/* Content of each post card */}
                   {/* {post.content.map((element, index) => {
@@ -94,17 +101,22 @@ function blog({ data }) {
                 })} */}
                   <div className={blogStyles.imageContainer}>
                     <Image
-                      src="https://picsum.photos/300"
-                      alt="lorem picsum random image"
-                      style={{
-                        width: "100%",
-                        maxHeight: "400px",
-                        objectFit: "cover",
-                      }}
-                      fill
-                      sizes="(max-width: 768px) 50vw,
-                    (max-width: 1200px) 50vw,
-                    25vw"
+                      // src={post.featuredImage || "https://picsum.photos/400"}
+                      src={post.featuredImage || "https://picsum.photos/400"}
+                      // src={
+                      //   post.featuredImage === null
+                      //     ? "https://picsum.photos/350"
+                      //     : post.featuredImage
+                      // }
+                      // src={
+                      //   post.featuredImage === null
+                      //     ? "https://picsum.photos/350"
+                      //     : `${assetPrefix}post.featuredImage`
+                      // }
+                      alt="image"
+                      style={{ objectFit: "cover" }}
+                      width={350}
+                      height={350}
                     ></Image>
                   </div>
                 </Link>

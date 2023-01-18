@@ -21,7 +21,7 @@ export async function getStaticProps() {
               date
               featuredImage {
                 node {
-                  link
+                  sourceUrl
                 }
               }
             }
@@ -51,7 +51,7 @@ function blog({ data }) {
   posts.forEach((element) => {
     let featuredImage = null;
     if (element[3] !== null) {
-      featuredImage = element[3].node.link;
+      featuredImage = element[3].node.sourceUrl;
     }
     postsConverted.push({
       id: element[0],

@@ -43,16 +43,21 @@ function blog({ data }) {
     htmlParser(post.node.content),
     // post.node.featuredImage.node.link,
     post.node.featuredImage,
-    console.log(post.node.featuredImage), // null
+    /*console.log(post.node.featuredImage), // null*/
   ]);
   let postsConverted = [];
 
   posts.forEach((element) => {
+    let featuredImage = null;
+    if (element[3] !== null) {
+      featuredImage = element[3].node.link;
+    }
     postsConverted.push({
       id: element[0],
       title: element[1],
       content: element[2],
-      featuredImage: element[3],
+      featuredImage: featuredImage,
+
     });
   });
 

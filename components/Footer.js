@@ -7,7 +7,7 @@ const Footer = () => {
       <div>Contact par téléphone : 06 06 06 06 06</div>
       <div>
         Site réalisé par l'agence web VexinWeb https://vexinweb.fr | Frontend
-        Julien Verley | Backend Marco Guzman
+        développeur Julien Verley | Backend développeur Marco Guzman
       </div>
     </div>
   );

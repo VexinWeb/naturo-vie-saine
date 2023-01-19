@@ -62,7 +62,7 @@ function blog({ data }) {
 
   {
     return (
-      <>
+      <main className={styles.main}>
         {/* All post cards */}
         <div className={blogStyles.blog}>
           <div className={blogStyles.posts}>
@@ -71,18 +71,18 @@ function blog({ data }) {
               <div className={blogStyles.post} key={post.id}>
                 <Link href="/blog/[id]" as={`/blog/${post.id}`}>
                   {/* Title of each post card */}
-                  <div className={blogStyles.h2Container}>
-                    <h2>{post.title}</h2>
+                  <div className={blogStyles.titleContainer}>
+                    <h3>{post.title}</h3>
                     {/* date */}
                     {/* <h4 style={{ padding: "0 10px" }}>{post.date}</h4> */}
                   </div>
                   <div className={blogStyles.imageContainer}>
                     <Image
-                      src={post.featuredImage || "https://picsum.photos/400"}
-                      alt="image"
+                      src={post.featuredImage || "/reading.svg"}
+                      alt="image illustrating blog article"
                       style={{ objectFit: "cover" }}
                       width={350}
-                      height={350}
+                      height={250}
                     ></Image>
                   </div>
                 </Link>
@@ -90,7 +90,7 @@ function blog({ data }) {
             ))}
           </div>
         </div>
-      </>
+      </main>
     );
   }
 }

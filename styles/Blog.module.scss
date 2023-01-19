@@ -1,5 +1,11 @@
 @import 'colors';
 
+.imageContainer {
+    position: relative;
+    width: 350px;
+    height: 250px;
+}
+
 .blog {
     display: block;
     width: 100%;
@@ -16,7 +22,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         width: 100%;
-        background-color: $color-third-bg;
+        background-color: $color-second-bg;
     
         .post {
             width: 350px;

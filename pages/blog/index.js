@@ -63,6 +63,15 @@ function blog({ data }) {
   {
     return (
       <main className={styles.main}>
+        <div className={blogStyles.imageContainer}>
+          <Image
+            src="/reading2.svg"
+            alt="image illustrating blog article"
+            style={{ objectFit: "cover" }}
+            width={350}
+            height={250}
+          ></Image>
+        </div>
         {/* All post cards */}
         <div className={blogStyles.blog}>
           <div className={blogStyles.posts}>

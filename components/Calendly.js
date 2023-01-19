@@ -7,7 +7,7 @@ const MyCalendly = () => {
       apiKey={process.env.REACT_APP_CALENDLY_APIKEY}
       url="https://calendly.com/vexinweb"
       styles={{
-        marginTop: "50px",
+        // marginTop: "50px",
         // width: "100%",
         width: "340px",
         height: "1300px",

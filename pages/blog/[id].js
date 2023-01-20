@@ -4,6 +4,7 @@ import client from "../../apollo-client";
 import htmlParser from "../utils/htmlParser";
 import Image from "next/image";
 import articleStyles from "../../styles/Article.module.scss";
+import styles from "../../styles/Layout.module.scss";
 
 export async function getStaticPaths() {
   // Fetch the IDs of all posts from the server
@@ -52,26 +53,39 @@ const Post = ({ data }) => {
   const elementsArray = htmlParser(data.post.content);
   console.log(elementsArray);
   return (
-    <div className={articleStyles.articleContainer}>
-      <h1>{data.post.title}</h1>
-      <div className={articleStyles.articleElements}>
-        {elementsArray.map((element, index) => {
-          if (element.tag === "img") {
-            return (
-              <Image
-                key={index}
-                src={element.src}
-                alt={element.alt}
-                style={{ objectFit: "cover", margin: "25px 0" }}
-                width={680}
-                height={400}
-              />
+    <main className={styles.main}>
+      <div className={articleStyles.articleContainer}>
+        <h1>{data.post.title}</h1>
+        <div className={articleStyles.articleElements}>
+          {elementsArray.map((element, index) => {
+            if (element.tag === "img") {
+              return (
+                <div className={articleStyles.imageContainer} key={index}>
+                  <Image
+                    key={index}
+                    src={element.src}
+                    alt={element.alt}
+                    style={{
+                      objectFit: "cover",
+                      // margin: "25px 0",
+                      width: "100%",
+                      // width: "680px",
+                      height: "100%",
+                    }}
+                    fill
+                  />
+                </div>
+              );
+            }
+            return React.createElement(
+              element.tag,
+              { key: index },
+              element.text
             );
-          }
-          return React.createElement(element.tag, { key: index }, element.text);
-        })}
+          })}
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default Post;

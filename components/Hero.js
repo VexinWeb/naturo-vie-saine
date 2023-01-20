@@ -21,7 +21,8 @@ const Hero = () => {
         </div> */}
         <div className={heroStyles.heroDescription}>
           <h1>Consultations en naturopathie</h1>
-          <h2>à Fontenay sous Bois et Gisors</h2>
+          <br />
+          <h2>En vidéoconsultation</h2>
           <br />
           <p>
             Les méthodes naturelles peuvent améliorer votre santé générale.{" "}
@@ -37,7 +38,7 @@ const Hero = () => {
       </Link>
       <div className={heroStyles.heroImageContainer}>
         <Image
-          src="/debout.png"
+          src="/relaxing.svg"
           alt="portrait de Anne Trébout, naturopathe"
           style={{ width: "100%", maxHeight: "300px", objectFit: "contain" }}
           fill

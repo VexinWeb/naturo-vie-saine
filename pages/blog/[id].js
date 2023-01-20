@@ -1,8 +1,9 @@
 import React from "react";
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
-import htmlParser from "../utils/htmlParser";
+import htmlRawParser from "../utils/htmlRawParser";
 import Image from "next/image";
+import articleStyles from "../../styles/Article.module.scss";
 
 export async function getStaticPaths() {
   // Fetch the IDs of all posts from the server
@@ -45,15 +46,19 @@ export async function getStaticProps({ params }) {
   };
 }
 
+const HtmlNode = ({tag,html}) => {
+  const Tag = tag
+  return <Tag dangerouslySetInnerHTML={{__html:html}}></Tag>
+}
+
 const Post = ({ data }) => {
   //Ici, il faut traiter {data} pour afficher le contenu du post.
-  console.log(data.post.content);
-  const elementsArray = htmlParser(data.post.content);
+  const elementsArray = htmlRawParser(data.post.content);
   console.log(elementsArray);
   return (
-    <div>
-      <h2>{data.post.title}</h2>
-      <div>
+    <div className={articleStyles.articleContainer}>
+      <h1>{data.post.title}</h1>
+      <div className={articleStyles.articleElements}>
         {elementsArray.map((element, index) => {
           if (element.tag === "img") {
             return (
@@ -61,12 +66,13 @@ const Post = ({ data }) => {
                 key={index}
                 src={element.src}
                 alt={element.alt}
-                width={500}
-                height={500}
+                style={{ objectFit: "cover", margin: "25px 0" }}
+                width={680}
+                height={400}
               />
             );
           }
-          return React.createElement(element.tag, { key: index }, element.text);
+          return <HtmlNode tag={element.tag} html={element.html} key={index} />
         })}
       </div>
     </div>

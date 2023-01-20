@@ -1,38 +1,61 @@
 @import 'colors';
 
+.imageContainer {
+    position: relative;
+    width: 350px;
+    height: 250px;
+}
+
 .blog {
+    display: block;
+    width: 100%;
     margin: 0 auto;
     width: 1400px;
     display: flex;
-    color: $color-text;
+    // color: $color-text;
+    color: white; 
+
 
     .posts {
+        border-radius: 25px;
+        margin: 0 auto 50px auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); 
         width: 100%;
+        background-color: $color-second-bg;
     
         .post {
             width: 350px;
-            // background-color: $color-third-bg;
-            margin: 20px auto;
+            margin: 35px auto 35px auto;
             display: flex;
             flex-direction: column;
             
-            .h2Container {
-                margin: 0;
-                height: 50px;
+            .titleContainer {
                 display: flex;
-                align-items: center;
-
-                h2 {
+                justify-content: center;
+                display: block;
+                height: 35px;
+                width: 350px;
+                padding-left: 15px;
+                // background-color: $color-header-bg;
+                
+                h3 {
                     margin: 0;
+                    padding: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
     
             .imageContainer {
-                position: relative;
-                width: 350px;
-                height: 350px;
+                border-radius: 25px;                width: 350px;
+                height: 250px;
+                background-color: white;
+
+                img {
+                    border-radius: 25px;                
+                }
             }
         }
     }

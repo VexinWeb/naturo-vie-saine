@@ -38,11 +38,12 @@ export async function getStaticProps() {
 
 function blog({ data }) {
   const posts = data.posts.edges.map((post) => [
-    post.node.id,
-    post.node.title,
-    htmlParser(post.node.content),
-    post.node.featuredImage,
-  ]);
+      post.node.id,
+      post.node.title,
+      htmlParser(post.node.content),
+      post.node.featuredImage,
+      post.node.date,
+    ]);
   let postsConverted = [];
 
   posts.forEach((element) => {
@@ -55,10 +56,11 @@ function blog({ data }) {
       title: element[1],
       content: element[2],
       featuredImage: featuredImage,
+      date: new Date(element[4]).toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"})
     });
   });
 
-  console.log(postsConverted);
+  /*console.log(postsConverted);*/
 
   {
     return (

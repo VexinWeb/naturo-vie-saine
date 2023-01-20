@@ -1,7 +1,7 @@
 import React from "react";
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
-import htmlParser from "../utils/htmlParser";
+import htmlRawParser from "../utils/htmlRawParser";
 import Image from "next/image";
 import articleStyles from "../../styles/Article.module.scss";
 import styles from "../../styles/Layout.module.scss";
@@ -47,10 +47,14 @@ export async function getStaticProps({ params }) {
   };
 }
 
+const HtmlNode = ({ tag, html }) => {
+  const Tag = tag;
+  return <Tag dangerouslySetInnerHTML={{ __html: html }}></Tag>;
+};
+
 const Post = ({ data }) => {
   //Ici, il faut traiter {data} pour afficher le contenu du post.
-  console.log(data.post.content);
-  const elementsArray = htmlParser(data.post.content);
+  const elementsArray = htmlRawParser(data.post.content);
   console.log(elementsArray);
   return (
     <main className={styles.main}>
@@ -77,10 +81,8 @@ const Post = ({ data }) => {
                 </div>
               );
             }
-            return React.createElement(
-              element.tag,
-              { key: index },
-              element.text
+            return (
+              <HtmlNode tag={element.tag} html={element.html} key={index} />
             );
           })}
         </div>

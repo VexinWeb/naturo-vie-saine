@@ -55,11 +55,13 @@ const HtmlNode = ({ tag, html }) => {
 const Post = ({ data }) => {
   //Ici, il faut traiter {data} pour afficher le contenu du post.
   const elementsArray = htmlRawParser(data.post.content);
-  console.log(elementsArray);
+  // console.log(elementsArray);
+  console.log(data.post);
   return (
     <main className={styles.main}>
       <div className={articleStyles.articleContainer}>
         <h1>{data.post.title}</h1>
+        {/* <h3>{data.post.date}</h3> */}
         <div className={articleStyles.articleElements}>
           {elementsArray.map((element, index) => {
             if (element.tag === "img") {

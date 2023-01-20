@@ -24,6 +24,17 @@
             margin: 20px 20px;
         }
     }
+    // date : 
+    h3 {
+        color: white;
+        margin: 30px 20px;
+        @media screen and (max-width: 700px) {
+            margin: 25px 20px;
+        }
+        @media screen and (max-width: 500px) {
+            margin: 20px 20px;
+        }
+    }
 
     .articleElements {
         .imageContainer {
@@ -52,7 +63,10 @@
 
     .articleElements p, h2, h3, h4 {
         position: relative;
-        margin: 20px; 
+        margin: 30px 10px; 
         color: white;  
+    }
+    .articleElements a {
+        text-decoration: underline;
     }
 }

@@ -43,6 +43,13 @@
             @media (max-width: 800px) {
                 width: 340px;
             }
+
+            :hover {
+                .imageContainer {
+                    filter: grayscale(0);
+                    transition-duration: .5s;
+                }
+            }
             
             .titleContainer {
                 display: flex;
@@ -69,6 +76,7 @@
                 width: 350px;
                 height: 250px;
                 background-color: white;
+                filter: grayscale(100%);
                 @media (max-width: 800px) {
                     width: 340px;
                     border-radius: 0;

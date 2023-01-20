@@ -9,15 +9,16 @@ const Section2 = () => {
       <br />
       <p>
         Les personnes consultent souvent un naturopathe pour obtenir des
-        conseils sur l'alimentation, l'exercice physique, le stress, le sommeil
-        et d'autres aspects de leur mode de vie qui peuvent affecter leur santé
-        et leur bien-être général. Un naturopathe peut également recommander des
-        traitements naturels tels que des herbes, des suppléments nutritifs et
-        des techniques de relaxation pour aider à soulager les symptômes de
-        différents troubles de santé. Les naturopathes sont souvent considérés
-        comme une forme de médecine alternative, et leur approche de la santé
-        est généralement basée sur l'utilisation de méthodes naturelles pour
-        renforcer le corps et aider à prévenir la maladie.
+        conseils sur l&lsquo;alimentation, l&lsquo;exercice physique, le stress,
+        le sommeil et d&lsquo;autres aspects de leur mode de vie qui peuvent
+        affecter leur santé et leur bien-être général. Un naturopathe peut
+        également recommander des traitements naturels tels que des herbes, des
+        suppléments nutritifs et des techniques de relaxation pour aider à
+        soulager les symptômes de différents troubles de santé. Les naturopathes
+        sont souvent considérés comme une forme de médecine alternative, et leur
+        approche de la santé est généralement basée sur l&lsquo;utilisation de
+        méthodes naturelles pour renforcer le corps et aider à prévenir la
+        maladie.
       </p>
       <br />
       <Collapse

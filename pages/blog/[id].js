@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import htmlParser from "../utils/htmlParser";
 import Image from "next/image";
+import articleStyles from "../../styles/Article.module.scss";
 
 export async function getStaticPaths() {
   // Fetch the IDs of all posts from the server
@@ -51,9 +52,9 @@ const Post = ({ data }) => {
   const elementsArray = htmlParser(data.post.content);
   console.log(elementsArray);
   return (
-    <div>
-      <h3>{data.post.title}</h3>
-      <div>
+    <div className={articleStyles.articleContainer}>
+      <h1>{data.post.title}</h1>
+      <div className={articleStyles.articleElements}>
         {elementsArray.map((element, index) => {
           if (element.tag === "img") {
             return (
@@ -61,8 +62,9 @@ const Post = ({ data }) => {
                 key={index}
                 src={element.src}
                 alt={element.alt}
-                width={500}
-                height={500}
+                style={{ objectFit: "cover", margin: "25px 0" }}
+                width={680}
+                height={400}
               />
             );
           }

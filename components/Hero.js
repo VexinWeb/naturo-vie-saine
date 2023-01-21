@@ -7,18 +7,6 @@ const Hero = () => {
   return (
     <div className={heroStyles.hero}>
       <Link href="/rendezvous" className={heroStyles.heroLeft}>
-        {/* <div className={heroStyles.heroLeft}> */}
-        {/* <div className={heroStyles.heroImageContainer}>
-          <Image
-            src="/vine.png"
-            alt="Image d'une vigne"
-            style={{ objectFit: "contain" }}
-            fill
-            //   style={{ position: "absolute", top: "0", right: "O" }}
-            // width={150}
-            // height={250}
-          ></Image>
-        </div> */}
         <div className={heroStyles.heroDescription}>
           <h1>Consultations en naturopathie</h1>
           <br />

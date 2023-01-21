@@ -9,11 +9,11 @@ const Section1 = () => {
         <Image
           src="/tree.png"
           alt="Arbre"
-          fill
           style={{ objectFit: "contain" }}
           sizes="(max-width: 768px) 50vw,
           (max-width: 1200px) 50vw,
           25vw"
+          fill
         ></Image>
       </div>
       <div className={section1Styles.section1Right}>

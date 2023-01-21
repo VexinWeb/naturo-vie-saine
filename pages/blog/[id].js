@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   const paths = data.posts.edges.map((post) => ({
     params: { id: post.node.id.toString() },
   }));
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {

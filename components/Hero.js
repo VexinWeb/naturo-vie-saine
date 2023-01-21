@@ -28,10 +28,10 @@ const Hero = () => {
             Les méthodes naturelles peuvent améliorer votre santé générale.{" "}
             <br /> <br />
             En collaboration, nous établissons des plans de traitement
-            personnalisés et efficaces. Je tiens compte de l'ensemble des
+            personnalisés et efficaces. Je tiens compte de l&lsquo;ensemble des
             aspects de votre vie pour vous aider à atteindre votre bien-être, en
-            utilisant des techniques telles que l'homéopathie, l'aromathérapie
-            et les conseils en nutrition.
+            utilisant des techniques telles que l&lsquo;homéopathie,
+            l&lsquo;aromathérapie et les conseils en nutrition.
           </p>
         </div>
         {/* </div> */}

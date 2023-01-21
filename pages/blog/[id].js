@@ -5,6 +5,8 @@ import htmlRawParser from "../utils/htmlRawParser";
 import Image from "next/image";
 import articleStyles from "../../styles/Article.module.scss";
 import styles from "../../styles/Layout.module.scss";
+import dynamic from "next/dynamic";
+const HtmlNode = dynamic(() => import("/components/HtmlNode"), { ssr: false });
 
 export async function getStaticPaths() {
   // Fetch the IDs of all posts from the server
@@ -47,47 +49,41 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const HtmlNode = ({ tag, html }) => {
-  const Tag = tag;
-  return <Tag dangerouslySetInnerHTML={{ __html: html }}></Tag>;
-};
-
 const Post = ({ data }) => {
   //Ici, il faut traiter {data} pour afficher le contenu du post.
   const elementsArray = htmlRawParser(data.post.content);
-  // console.log(elementsArray);
-  console.log(data.post);
+  let componentsArray = [];
+  elementsArray.forEach((element, index) => {
+    if (element.tag === "img") {
+      componentsArray.push(
+        <div className={articleStyles.imageContainer} key={index}>
+          <Image
+            key={index}
+            src={element.src}
+            alt={element.alt}
+            style={{
+              objectFit: "cover",
+              // margin: "25px 0",
+              width: "100%",
+              // width: "680px",
+              height: "100%",
+            }}
+            fill
+          />
+        </div>
+      );
+    } else {
+      componentsArray.push(
+        <HtmlNode tag={element.tag} html={element.html} key={index} />
+      );
+    }
+  });
   return (
     <main className={styles.main}>
       <div className={articleStyles.articleContainer}>
         <h1>{data.post.title}</h1>
         {/* <h3>{data.post.date}</h3> */}
-        <div className={articleStyles.articleElements}>
-          {elementsArray.map((element, index) => {
-            if (element.tag === "img") {
-              return (
-                <div className={articleStyles.imageContainer} key={index}>
-                  <Image
-                    key={index}
-                    src={element.src}
-                    alt={element.alt}
-                    style={{
-                      objectFit: "cover",
-                      // margin: "25px 0",
-                      width: "100%",
-                      // width: "680px",
-                      height: "100%",
-                    }}
-                    fill
-                  />
-                </div>
-              );
-            }
-            return (
-              <HtmlNode tag={element.tag} html={element.html} key={index} />
-            );
-          })}
-        </div>
+        <div className={articleStyles.articleElements}>{componentsArray}</div>
       </div>
     </main>
   );

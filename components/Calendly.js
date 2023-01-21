@@ -9,7 +9,7 @@ const MyCalendly = () => {
       styles={{
         // marginTop: "50px",
         // width: "100%",
-        width: "340px",
+        width: "350px",
         height: "1300px",
       }}
       pageSettings={{

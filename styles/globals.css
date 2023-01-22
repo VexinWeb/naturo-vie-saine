@@ -63,12 +63,12 @@ p {
 }
 @media screen and (max-width: 1000px) {
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 800px) {
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 750px) {

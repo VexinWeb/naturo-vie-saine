@@ -82,7 +82,7 @@ const Post = ({ data }) => {
     <main className={styles.main}>
       <div className={articleStyles.articleContainer}>
         <h1>{data.post.title}</h1>
-        {/* <h3>{data.post.date}</h3> */}
+        {/* <h3>Article posté le {data.post.date}</h3> */}
         <div className={articleStyles.articleElements}>{componentsArray}</div>
       </div>
     </main>

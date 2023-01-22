@@ -27,7 +27,7 @@ const Hero = () => {
       <div className={heroStyles.heroImageContainer}>
         <Image
           src="/relaxing.svg"
-          alt="portrait de Anne Trébout, naturopathe"
+          alt="portrait d'un consultant en naturopathie en téléconsultation'"
           style={{ width: "100%", maxHeight: "300px", objectFit: "contain" }}
           fill
           sizes="(max-width: 768px) 50vw,

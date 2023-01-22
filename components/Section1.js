@@ -18,6 +18,7 @@ const Section1 = () => {
       </div>
       <div className={section1Styles.section1Right}>
         <h2>Qu&apos;est-ce que la naturopathie ?</h2>
+        <br />
         <p>
           La naturopathie est une pratique de médecine alternative qui vise à
           promouvoir la santé et le bien-être en utilisant des méthodes

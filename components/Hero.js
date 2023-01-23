@@ -13,8 +13,8 @@ const Hero = () => {
           <h2>En vidéoconsultation</h2>
           <br />
           <p>
-            Les méthodes naturelles peuvent améliorer votre santé générale.{" "}
-            <br /> <br />
+            Les méthodes naturelles peuvent améliorer votre santé générale.
+            <br />
             En collaboration, nous établissons des plans de traitement
             personnalisés et efficaces. Je tiens compte de l&lsquo;ensemble des
             aspects de votre vie pour vous aider à atteindre votre bien-être, en

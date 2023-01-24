@@ -5,7 +5,8 @@ const MyCalendly = () => {
   return (
     <InlineWidget
       apiKey={process.env.REACT_APP_CALENDLY_APIKEY}
-      url="https://calendly.com/vexinweb"
+      // url="https://calendly.com/vexinweb"
+      url="https://calendly.com/anne_trebout_naturo"
       styles={{
         // marginTop: "50px",
         // width: "100%",

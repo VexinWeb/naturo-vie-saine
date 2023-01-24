@@ -4,10 +4,15 @@ import footerStyles from "../styles/Footer.module.scss";
 const Footer = () => {
   return (
     <div className={footerStyles.footer}>
-      <div>Contact par téléphone : 06 06 06 06 06</div>
       <div>
-        Agence web https://vexinweb.fr | Développeur Frontend Julien Verley |
-        Développeur Backend Marco Guzman
+        <div>Contact par téléphone : 06 06 06 06 06</div>
+        <div>Contact par mail : anne.trebout.naturo@gmail.com</div>
+      </div>
+      <div>
+        <div>Site réalisé par l&apos;agence web https://vexinweb.fr</div>
+        <div>
+          Développeur Frontend Julien Verley | Développeur Backend Marco Guzman
+        </div>
       </div>
     </div>
   );

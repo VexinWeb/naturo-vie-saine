@@ -75,8 +75,6 @@ function blog({ data }) {
             src="/reading2.svg"
             alt="image illustrating blog article"
             style={{ objectFit: "contain" }}
-            // width={350}
-            // height={250}
             fill
           ></Image>
         </div>

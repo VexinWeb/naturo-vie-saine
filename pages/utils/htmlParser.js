@@ -8,12 +8,11 @@ function parseHTML(html) {
   let i = 0;
 
   const elements = $("body *:not(figure, br, strong)");
-
   /*console.log(elements);*/
 
   elements.each((index, element) => {
     if (element.name === "p") {
-      console.log($(element).toString())
+      console.log($(element).toString());
     }
     if (element.name === "img") {
       elementsObject[i] = {

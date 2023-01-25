@@ -22,7 +22,6 @@ const Hero = () => {
             l&lsquo;aromathérapie et les conseils en nutrition.
           </p>
         </div>
-        {/* </div> */}
       </Link>
       <div className={heroStyles.heroImageContainer}>
         <Image

@@ -6,11 +6,6 @@
   --font-mono: 'Raleway', sans-serif;
 }
 
-/* @media {
-  :root {
-  }
-} */
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -84,6 +79,5 @@ p {
 }
 
 .active {
-  /* text-decoration: underline; */
   font-weight: bold;
 }

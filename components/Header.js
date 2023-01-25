@@ -8,7 +8,6 @@ const Header = () => {
     <div className={headerStyles.header}>
       <Link href="/" className={headerStyles.headerLeft}>
         <div className={headerStyles.headerImageContainer}>
-          {/* <div> */}
           <Image
             src="/ginkgo_white.png"
             alt="logo"

@@ -51,7 +51,7 @@ export async function getStaticProps({ params }) {
 }
 
 const Post = ({ data }) => {
-  //Ici, il faut traiter {data} pour afficher le contenu du post.
+  //For each {data}, article
   const elementsArray = htmlRawParser(data.post.content);
   let componentsArray = [];
   elementsArray.forEach((element, index) => {
@@ -64,9 +64,7 @@ const Post = ({ data }) => {
             alt={element.alt}
             style={{
               objectFit: "cover",
-              // margin: "25px 0",
               width: "100%",
-              // width: "680px",
               height: "100%",
             }}
             fill

@@ -65,8 +65,6 @@ function blog({ data }) {
     });
   });
 
-  /*console.log(postsConverted);*/
-
   {
     return (
       <main className={styles.main}>
@@ -78,7 +76,7 @@ function blog({ data }) {
             fill
           ></Image>
         </div>
-        {/* All post cards */}
+        {/* All articles */}
         <div className={blogStyles.blog}>
           <div className={blogStyles.posts}>
             {postsConverted.map((post) => (

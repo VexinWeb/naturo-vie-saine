@@ -22,7 +22,6 @@ const Header = () => {
           />
         </div>
         <div className={headerStyles.headerFonts}>
-          {/* <Link href="/">Anne Trébout Naturopathe</Link> */}
           <div href="/">Anne Trébout Naturopathe</div>
         </div>
       </Link>

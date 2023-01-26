@@ -33,17 +33,18 @@ export async function getStaticProps() {
     props: {
       data,
     },
+    revalidate: 1,
   };
 }
 
 function blog({ data }) {
   const posts = data.posts.edges.map((post) => [
-      post.node.id,
-      post.node.title,
-      htmlParser(post.node.content),
-      post.node.featuredImage,
-      post.node.date,
-    ]);
+    post.node.id,
+    post.node.title,
+    htmlParser(post.node.content),
+    post.node.featuredImage,
+    post.node.date,
+  ]);
   let postsConverted = [];
 
   posts.forEach((element) => {
@@ -56,7 +57,11 @@ function blog({ data }) {
       title: element[1],
       content: element[2],
       featuredImage: featuredImage,
-      date: new Date(element[4]).toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"})
+      date: new Date(element[4]).toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }),
     });
   });
 
@@ -65,13 +70,14 @@ function blog({ data }) {
   {
     return (
       <main className={styles.main}>
-        <div className={blogStyles.imageContainer}>
+        <div className={blogStyles.topImageContainer}>
           <Image
             src="/reading2.svg"
             alt="image illustrating blog article"
-            style={{ objectFit: "cover" }}
-            width={350}
-            height={250}
+            style={{ objectFit: "contain" }}
+            // width={350}
+            // height={250}
+            fill
           ></Image>
         </div>
         {/* All post cards */}

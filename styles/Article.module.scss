@@ -24,9 +24,14 @@
         }
     }
     // date : 
-    h3 {
+    .h3 {
+        // color: red;
         color: white;
-        margin: 30px 20px;
+        font-weight: 400;
+        font-size: 0.9rem;
+        // font-style: italic;
+        
+        margin: 0 20px;
         @media screen and (max-width: 700px) {
             margin: 25px 20px;
         }

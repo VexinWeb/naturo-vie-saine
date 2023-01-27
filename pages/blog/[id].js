@@ -81,8 +81,15 @@ const Post = ({ data }) => {
   return (
     <main className={styles.main}>
       <div className={articleStyles.articleContainer}>
+        <h3 className={articleStyles.h3}>
+          Posté le{" "}
+          {new Date(data.post.date).toLocaleDateString("fr-FR", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </h3>
         <h1>{data.post.title}</h1>
-        {/* <h3>Article posté le {data.post.date}</h3> */}
         <div className={articleStyles.articleElements}>{componentsArray}</div>
       </div>
     </main>

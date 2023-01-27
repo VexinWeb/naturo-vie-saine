@@ -1,17 +1,31 @@
 import React from "react";
 import footerStyles from "../styles/Footer.module.scss";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className={footerStyles.footer}>
       <div>
-        <div>Contact par téléphone : 06 06 06 06 06</div>
-        <div>Contact par mail : anne.trebout.naturo@gmail.com</div>
+        {/* <div>Téléphone : 06 06 06 06 06</div> */}
+        <div>
+          Mail :{" "}
+          <a href="mailto:anne.trebout.naturo@gmail.com">
+            anne.trebout.naturo@gmail.com
+          </a>
+        </div>
       </div>
       <div>
-        <div>Site réalisé par l&apos;agence web https://vexinweb.fr</div>
         <div>
-          Développeur Frontend Julien Verley | Développeur Backend Marco Guzman
+          <a href="https://www.linkedin.com/in/julienverley">Agence VexinWeb</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/julienverley">
+            Développeur Frontend Julien Verley
+          </a>
+          {" | "}
+          <a href="https://www.linkedin.com/in/marco-guzman-dev">
+            Développeur Backend Marco Guzman
+          </a>
         </div>
       </div>
     </div>

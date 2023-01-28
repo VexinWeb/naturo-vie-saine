@@ -1,6 +1,6 @@
 import React from "react";
 import footerStyles from "../styles/Footer.module.scss";
-import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -8,25 +8,27 @@ const Footer = () => {
       <div>
         {/* <div>Téléphone : 06 06 06 06 06</div> */}
         <div>
-          Mail :{" "}
           <a href="mailto:anne.trebout.naturo@gmail.com">
-            anne.trebout.naturo@gmail.com
+            @ Anne Trébout Naturopathe
           </a>
         </div>
       </div>
       <div>
         <div>
-          <a href="https://www.linkedin.com/in/julienverley">Agence VexinWeb</a>
-        </div>
-        <div>
           <a href="https://www.linkedin.com/in/julienverley">
-            Développeur Frontend Julien Verley
+            Site réalisé par VexinWeb
+          </a>
+          {" | "}
+          <a href="https://www.linkedin.com/in/julienverley">
+            {" "}
+            Frontend Julien Verley
           </a>
           {" | "}
           <a href="https://www.linkedin.com/in/marco-guzman-dev">
-            Développeur Backend Marco Guzman
+            Backend Marco Guzman
           </a>
         </div>
+        <div></div>
       </div>
     </div>
   );

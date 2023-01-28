@@ -15,9 +15,7 @@ const Footer = () => {
       </div>
       <div>
         <div>
-          <a href="https://www.linkedin.com/in/julienverley">
-            Site réalisé par VexinWeb
-          </a>
+          <a href="https://vexinweb.fr/">Site réalisé par VexinWeb</a>
           {" | "}
           <a href="https://www.linkedin.com/in/julienverley">
             {" "}

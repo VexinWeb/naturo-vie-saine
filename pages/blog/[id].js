@@ -8,6 +8,7 @@ import styles from "../../styles/Layout.module.scss";
 import dynamic from "next/dynamic";
 const HtmlNode = dynamic(() => import("/components/HtmlNode"), { ssr: false });
 
+// Tell Next.js how many pages there are
 export async function getStaticPaths() {
   // Fetch the IDs of all posts from the server
   const { data } = await client.query({
@@ -30,6 +31,7 @@ export async function getStaticPaths() {
   return { paths, fallback: "blocking" };
 }
 
+// For each individual page: get the data for the page
 export async function getStaticProps({ params }) {
   const { data } = await client.query({
     query: gql`

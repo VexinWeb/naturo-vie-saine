@@ -13,7 +13,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {/* <div> */}
       <div className={footerStyles.right}>
         <a href="https://vexinweb.fr/">
           Site réalisé par l&apos;agence
@@ -39,7 +38,6 @@ const Footer = () => {
       </div>
       <div></div>
     </div>
-    // </div>
   );
 };
 

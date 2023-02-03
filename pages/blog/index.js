@@ -6,6 +6,7 @@ import htmlParser from "../utils/htmlParser";
 import Image from "next/image";
 import styles from "../../styles/Layout.module.scss";
 import blogStyles from "../../styles/Blog.module.scss";
+import Meta from "../../components/Meta";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -68,6 +69,7 @@ function blog({ data }) {
   {
     return (
       <main className={styles.main}>
+        <Meta title={"Blog"} />
         <div className={blogStyles.topImageContainer}>
           <Image
             src="/reading2.svg"

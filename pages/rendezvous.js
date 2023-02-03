@@ -4,10 +4,12 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import rendezVousStyles from "../styles/RendezVous.module.scss";
 import styles from "../styles/Layout.module.scss";
+import Meta from "../components/Meta";
 
 const rendezvous = () => {
   return (
     <main className={styles.main}>
+      <Meta title="Rendez-vous" />
       <div className={rendezVousStyles.rendezVous}>
         <div className={rendezVousStyles.imageContainer}>
           <Image

@@ -7,6 +7,7 @@ import articleStyles from "../../styles/Article.module.scss";
 import styles from "../../styles/Layout.module.scss";
 import dynamic from "next/dynamic";
 const HtmlNode = dynamic(() => import("/components/HtmlNode"), { ssr: false });
+import Meta from "../../components/Meta";
 
 // Tell Next.js how many pages there are
 export async function getStaticPaths() {
@@ -82,6 +83,7 @@ const Post = ({ data }) => {
   });
   return (
     <main className={styles.main}>
+      <Meta title={data.post.title} />
       <div className={articleStyles.articleContainer}>
         <h3 className={articleStyles.h3}>
           Posté le{" "}
